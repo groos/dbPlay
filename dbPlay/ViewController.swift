@@ -14,6 +14,21 @@ class ViewController: UIViewController {
     
     let databasePath = "/Users/ntgroos/ctaapp/cta.sqlite"
     
+
+    // sends a request to cta REST api
+    @IBAction func getSomeXML(sender: AnyObject){
+        let ctaURL = "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=a8456dcbhf8475683cf7818bca81&mapid=40380&max=5"
+        
+        let url = NSURL(string: ctaURL)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
+            self.dbOutput.text = NSString(data: data, encoding: NSUTF8StringEncoding)
+        }
+        
+        task.resume()
+    }
+    
+    // example of db query example
     @IBAction func findContact(sender: AnyObject) {
         let contactDB = FMDatabase(path: databasePath as String)
         
