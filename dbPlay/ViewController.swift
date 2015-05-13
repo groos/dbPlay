@@ -8,26 +8,40 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, NSXMLParserDelegate {
     
     @IBOutlet weak var dbOutput: UILabel!
     
     let databasePath = "/Users/ntgroos/ctaapp/cta.sqlite"
+    let ctaURL = "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40380&max=5"
     
-
+    let url = NSURL(string: "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40380&max=5")
+    
+    @IBAction func myParse(){
+        var xmlParser = NSXMLParser(contentsOfURL: url)
+        xmlParser?.delegate = self
+        xmlParser?.parse()
+    }
+    
+    // This gets called throughout the parsing, can add elements/attributes to a dictionary
+    // need to figure out how to manage nesting of elements vs attributes
+    func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!, attributes attributeDict: NSDictionary!) {
+        dbOutput.text = elementName
+    }
+    
     // sends a request to cta REST api
     @IBAction func getSomeXML(sender: AnyObject){
-        let ctaURL = "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=a8456dcbhf8475683cf7818bca81&mapid=40380&max=5"
         
-        let url = NSURL(string: ctaURL)
+        let url = NSURL(string: "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40380&max=5")
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
             self.dbOutput.text = NSString(data: data, encoding: NSUTF8StringEncoding)
         }
         
+        // uncomment this for standard http request
         task.resume()
     }
-    
+
     // example of db query example
     @IBAction func findContact(sender: AnyObject) {
         let contactDB = FMDatabase(path: databasePath as String)
