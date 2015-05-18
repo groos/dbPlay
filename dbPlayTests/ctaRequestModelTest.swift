@@ -10,7 +10,7 @@ import Foundation
 
  //------------ test arrivals ---------------//
 
-    let tr = ctaRequestModel()
+   // let tr = ctaRequestModel()
 
     var mid     : Int?  = 40380
     var sid     : Int?      // map or stp reqired
