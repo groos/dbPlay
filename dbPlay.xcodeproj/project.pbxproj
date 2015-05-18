@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44B722B21B0A453900BAB33F /* ctaRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B722B11B0A453900BAB33F /* ctaRequestModel.swift */; };
+		44B722B41B0A467100BAB33F /* ctaRequestModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B722B31B0A467100BAB33F /* ctaRequestModelTest.swift */; };
 		87DB855C1B003918007E3D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DB855B1B003918007E3D49 /* AppDelegate.swift */; };
 		87DB855E1B003918007E3D49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DB855D1B003918007E3D49 /* ViewController.swift */; };
 		87DB85611B003918007E3D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DB855F1B003918007E3D49 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44B722B11B0A453900BAB33F /* ctaRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ctaRequestModel.swift; path = dbPlay/ctaRequestModel.swift; sourceTree = "<group>"; };
+		44B722B31B0A467100BAB33F /* ctaRequestModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ctaRequestModelTest.swift; sourceTree = "<group>"; };
 		87DB85561B003918007E3D49 /* dbPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dbPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DB855A1B003918007E3D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87DB855B1B003918007E3D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 				87DB85851B003969007E3D49 /* FMDatabasePool.h */,
 				87DB85861B003969007E3D49 /* FMDatabasePool.m */,
 				87DB857B1B003968007E3D49 /* dbPlay-Bridging-Header.h */,
+				44B722B11B0A453900BAB33F /* ctaRequestModel.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +138,7 @@
 			children = (
 				87DB85711B003918007E3D49 /* dbPlayTests.swift */,
 				87DB856F1B003918007E3D49 /* Supporting Files */,
+				44B722B31B0A467100BAB33F /* ctaRequestModelTest.swift */,
 			);
 			path = dbPlayTests;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 			files = (
 				87DB85891B003969007E3D49 /* FMDatabaseQueue.m in Sources */,
 				87DB85871B003969007E3D49 /* FMDatabase.m in Sources */,
+				44B722B21B0A453900BAB33F /* ctaRequestModel.swift in Sources */,
 				87DB855E1B003918007E3D49 /* ViewController.swift in Sources */,
 				87DB85881B003969007E3D49 /* FMResultSet.m in Sources */,
 				87DB858B1B003969007E3D49 /* FMDatabasePool.m in Sources */,
@@ -259,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44B722B41B0A467100BAB33F /* ctaRequestModelTest.swift in Sources */,
 				87DB85721B003918007E3D49 /* dbPlayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +456,7 @@
 				87DB85771B003918007E3D49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87DB85781B003918007E3D49 /* Build configuration list for PBXNativeTarget "dbPlayTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +465,7 @@
 				87DB857A1B003918007E3D49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
