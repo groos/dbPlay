@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4400E26D1B0AD88D0060F901 /* ctaRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B722B11B0A453900BAB33F /* ctaRequestModel.swift */; };
-		4400E2A51B0B01240060F901 /* ctaBusReqest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4400E2A41B0B01240060F901 /* ctaBusReqest.swift */; };
-		44B722B21B0A453900BAB33F /* ctaRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B722B11B0A453900BAB33F /* ctaRequestModel.swift */; };
+		4400E26D1B0AD88D0060F901 /* ctaTrainRequesHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B722B11B0A453900BAB33F /* ctaTrainRequesHttp.swift */; };
+		4400E2A51B0B01240060F901 /* ctaBusReqestHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4400E2A41B0B01240060F901 /* ctaBusReqestHttp.swift */; };
+		44B722B21B0A453900BAB33F /* ctaTrainRequesHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B722B11B0A453900BAB33F /* ctaTrainRequesHttp.swift */; };
 		44B722B41B0A467100BAB33F /* ctaRequestModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B722B31B0A467100BAB33F /* ctaRequestModelTest.swift */; };
 		87DB855C1B003918007E3D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DB855B1B003918007E3D49 /* AppDelegate.swift */; };
 		87DB855E1B003918007E3D49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DB855D1B003918007E3D49 /* ViewController.swift */; };
@@ -35,8 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4400E2A41B0B01240060F901 /* ctaBusReqest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ctaBusReqest.swift; sourceTree = "<group>"; };
-		44B722B11B0A453900BAB33F /* ctaRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ctaRequestModel.swift; path = dbPlay/ctaRequestModel.swift; sourceTree = "<group>"; };
+		4400E2A41B0B01240060F901 /* ctaBusReqestHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ctaBusReqestHttp.swift; sourceTree = "<group>"; };
+		44B722B11B0A453900BAB33F /* ctaTrainRequesHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ctaTrainRequesHttp.swift; path = dbPlay/ctaTrainRequesHttp.swift; sourceTree = "<group>"; };
 		44B722B31B0A467100BAB33F /* ctaRequestModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ctaRequestModelTest.swift; sourceTree = "<group>"; };
 		87DB85561B003918007E3D49 /* dbPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dbPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DB855A1B003918007E3D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,13 +101,13 @@
 			name = DB;
 			sourceTree = "<group>";
 		};
-		4400E26A1B0AD7290060F901 /* CTAAPI */ = {
+		4400E26A1B0AD7290060F901 /* StringBuilders */ = {
 			isa = PBXGroup;
 			children = (
-				44B722B11B0A453900BAB33F /* ctaRequestModel.swift */,
-				4400E2A41B0B01240060F901 /* ctaBusReqest.swift */,
+				44B722B11B0A453900BAB33F /* ctaTrainRequesHttp.swift */,
+				4400E2A41B0B01240060F901 /* ctaBusReqestHttp.swift */,
 			);
-			name = CTAAPI;
+			name = StringBuilders;
 			sourceTree = "<group>";
 		};
 		87DB854D1B003918007E3D49 = {
@@ -118,7 +118,7 @@
 				87DB856E1B003918007E3D49 /* dbPlayTests */,
 				87DB85571B003918007E3D49 /* Products */,
 				4400E2691B0AD7150060F901 /* DB */,
-				4400E26A1B0AD7290060F901 /* CTAAPI */,
+				4400E26A1B0AD7290060F901 /* StringBuilders */,
 			);
 			sourceTree = "<group>";
 		};
@@ -272,8 +272,8 @@
 			files = (
 				87DB85891B003969007E3D49 /* FMDatabaseQueue.m in Sources */,
 				87DB85871B003969007E3D49 /* FMDatabase.m in Sources */,
-				4400E2A51B0B01240060F901 /* ctaBusReqest.swift in Sources */,
-				44B722B21B0A453900BAB33F /* ctaRequestModel.swift in Sources */,
+				4400E2A51B0B01240060F901 /* ctaBusReqestHttp.swift in Sources */,
+				44B722B21B0A453900BAB33F /* ctaTrainRequesHttp.swift in Sources */,
 				87DB855E1B003918007E3D49 /* ViewController.swift in Sources */,
 				87DB85881B003969007E3D49 /* FMResultSet.m in Sources */,
 				87DB858B1B003969007E3D49 /* FMDatabasePool.m in Sources */,
@@ -286,7 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4400E26D1B0AD88D0060F901 /* ctaRequestModel.swift in Sources */,
+				4400E26D1B0AD88D0060F901 /* ctaTrainRequesHttp.swift in Sources */,
 				44B722B41B0A467100BAB33F /* ctaRequestModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
