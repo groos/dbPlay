@@ -66,11 +66,9 @@ class ctaRequestModel {
 
     func locations(rt:String?) -> String? {
         if (self.baseUrlLocations == nil || rt == nil || self.Trainkey == nil) { return nil }
-        return ("\(self.baseUrlLocations)?key=\(key)&rt=\(rt)")
+        return "\(self.baseUrlLocations)?key=\(Trainkey)&rt=\(rt)"
         
     }
-
-
 }
 
 

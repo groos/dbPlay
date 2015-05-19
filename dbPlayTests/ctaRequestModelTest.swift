@@ -1,37 +1,75 @@
 //
-//  ctaRequestModelTest.swift
+//  CTAhttpRequestTest.swift
 //  dbPlay
 //
 //  Created by paul hawk on 5/18/15.
 //  Copyright (c) 2015 DePaul University. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import XCTest
 
- //------------ test arrivals ---------------//
-
-   // let tr = ctaRequestModel()
-
-    var mid     : Int?  = 40380
-    var sid     : Int?      // map or stp reqired
-    var maxRt   : Int?      // optional
-    var rts     : Int?      // optional
-
-    let arivalHttpActual = tr.trainRequest.arrivals(mapId: mid, stpId: sid, maxRet: maxRt, rt: rts)
-
-    let arivalHttpExpected : String? = "lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40380"
-
-// ------------Follow This Train API ---------------//
-
-    var followRunNumber : Int?  = 209
-    let followTestActual =  tr.followTrain(followRunNumber)
-    let followTestExpected = "lapi.transitchicago.com/api/1.0/ttfollow.aspx?key=25924988075841f2970d3e7f95c8070c&runnumber=209"
-
-
-// ------------Locations API ---------------//
-
-    var locationsRt : String?  = "Red"         //required
-    let locationsTestActual = tr.locations(locationsRt)
-    let locationsTestExpected = "xx"
-
-
+class CTAhttpRequestTest: XCTestCase {
+    //  XCTAssertEqual(expected[0], sorted[0], "the array should be sorted properly")
+    override func setUp() {
+        //super.setUp()
+        let tr = ctaRequestModel()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+    
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+    }
+    
+    func testExample() {
+        // This is an example of a functional test case.
+        XCTAssert(true, "Pass")
+    }
+    
+    func testPerformanceExample() {
+        // This is an example of a performance test case.
+        self.measureBlock() {
+            // Put the code you want to measure the time of here.
+        }
+    }
+    
+    //------------ test arrivals ---------------//
+    
+    func testArrivals () {
+        let tr = ctaRequestModel()
+        var mid     : Int?  = 40380
+        var sid     : Int?      // map or stp reqired
+        var maxRt   : Int?      // optional
+        var rts     : Int?      // optional
+        
+        let arivalHttpActual = tr. tr.arrivals(mapId: mid, stpId: sid, maxRet: maxRt, rt: rts)
+        
+        let arivalHttpExpected : String? = "lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40380"
+        
+        XCTAssertEquals(arivalHttpExpected , arivalHttpActual, "Arival times http request" )
+        
+    }
+    // ------------Follow This Train API ---------------//
+    func testTrainApi () {
+        let tr = ctaRequestModel()
+        var followRunNumber : Int?  = 209
+        let followTestActual =  tr.followTrain(followRunNumber)
+        let followTestExpected = "lapi.transitchicago.com/api/1.0/ttfollow.aspx?key=25924988075841f2970d3e7f95c8070c&runnumber=209"
+        
+        XCTAssertEquals(followTestExpected, followTestActual)
+    }
+    
+    // ------------Locations API ---------------//
+    func testLocation () {
+        let tr = ctaRequestModel()
+        var locationsRt : String?  = "Red"         //required
+        let locationsTestActual = tr.locations(locationsRt)
+        let locationsTestExpected = "xx"
+        XCTAssertEquals(locationsTestExpected, locationsTestExpected )
+    }
+    
+    
+    
+    
+}
